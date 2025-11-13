@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Creamberry — Frescura & Coquett</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="logo.png" alt="Creamberry logo" class="logo" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <h1>Creamberry</h1>
+        <p class="tagline">Frescura y Sabor</p>
+      </div>
+    </div>
+
+    <button id="hamburger" class="hamburger" aria-label="Abrir menú">☰</button>
+
+    <nav class="main-nav" id="mainNav" role="navigation">
+      <a href="index.html" class="nav-link active">Inicio</a>
+      <a href="quienes-somos.html" class="nav-link ">Quiénes somos</a>
+      <a href="servicios.html" class="nav-link ">Servicios</a>
+      <a href="toppings.html" class="nav-link ">Toppings</a>
+      <a href="finanzas.html" class="nav-link ">Finanzas</a>
+      <a href="contacto.html" class="nav-link ">Contacto</a>
+      <button class="cart-btn" id="openCartBtn" aria-label="Abrir carrito">🛒 <span class="cart-count">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h2 class="hero-title">La dulzura que enamora</h2>
+          <p class="hero-sub">Coquett, fresca y preciosa — fresas con crema hechas con amor.</p>
+          <div class="hero-ctas">
+            <a href="servicios.html" class="btn btn-primary glow">Ver Servicios</a>
+            <a href="toppings.html" class="btn btn-ghost glow">Ver Toppings</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://media.istockphoto.com/id/508832706/es/foto/frescas-postres-con-fresas-queso-cremoso-y-mermelada-de-fresa.jpg?s=612x612&w=0&k=20&c=tr965927yA15OkB2j1NJHOGCLMMIw5LNaj7V8LfGhus=" alt="Fresas con crema">
+        </div>
+      </div>
+    </section>
+
+    <section class="favorites" id="favoritas">
+      <h3>Nuestras favoritas</h3>
+      <div class="cards">
+        <article class="card">
+          <img src="https://www.nattahometaste.com/wp-content/uploads/2025/02/fresas-con-crema-textura-suave.jpeg" alt="Clásico">
+          <h4>Fresas Clásico</h4>
+          <p class="desc">La receta que enamora generaciones.</p>
+          <div class="price-row"><span class="price">$1500</span><button class="btn small glow" onclick="addItem('Fresas Clásico',1500)">Agregar</button></div>
+        </article>
+
+        <article class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQspdzHMJ3ydT24K1VUSGd7Jt8Fafm4Xsj9lwwjHYB5l_RiKBlY7EaSDS-N8ifrTcNJGY&usqp=CAU" alt="Manjar">
+          <h4>Fresas Manjar</h4>
+          <p class="desc">Toque cremoso de manjar y frescura.</p>
+          <div class="price-row"><span class="price">$1500</span><button class="btn small glow" onclick="addItem('Fresas Manjar',1500)">Agregar</button></div>
+        </article>
+
+        <article class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqQXKRzlbC4NJL3nnz5GQGjpQqW49_Vrb8fQ&s" alt="Chocolate">
+          <h4>Fresas Chocolate</h4>
+          <p class="desc">Chocolate, crema y amor en cada bocado.</p>
+          <div class="price-row"><span class="price">$1500</span><button class="btn small glow" onclick="addItem('Fresas Chocolate',1500)">Agregar</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="toppings-preview">
+      <h3>Toppings estrellas</h3>
+      <div class="toppings-row">
+        <div class="topping">
+          <img src="https://media.istockphoto.com/id/458290815/es/foto/abrir-bolsa-de-m-ms-chocolate-con-leche-golosinas.jpg?s=612x612&w=0&k=20&c=4p-RsSuaxhhlKeH3OoR88c8Rc3m7iQJhFUZRydK2Scs=" alt="M&M">
+          <h4>M&amp;M</h4>
+          <p class="price">$500</p>
+          <button class="btn small glow" onclick="addItem('M&M',500)">Agregar</button>
+        </div>
+
+        <div class="topping">
+          <img src="https://i5.walmartimages.com/asr/ced12673-6ac7-45ea-8393-b5c308fde1ad.c23b0e8f5d1b1f2fe8b8552226b38ea1.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Gomitas">
+          <h4>Gomitas</h4>
+          <p class="price">$500</p>
+          <button class="btn small glow" onclick="addItem('Gomitas',500)">Agregar</button>
+        </div>
+
+        <div class="topping">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkCVikCBPS5IowuU_UwsfiB9Q0cc0ZhJxoTdB66IeHrylqQaxtoJEaFjPx0PX4NLLWoVw&usqp=CAU" alt="Oreo">
+          <h4>Oreo</h4>
+          <p class="price">$500</p>
+          <button class="btn small glow" onclick="addItem('Oreo',500)">Agregar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="social-float">
+    <a href="https://www.instagram.com/cream_berry7?igsh=MXV4cXYwdmVzMG44NQ%3D%3D&utm_source=qr" target="_blank" title="Instagram">IG</a>
+    <a href="https://www.tiktok.com/@cream_berry7" target="_blank" title="TikTok">TT</a>
+    <a href="mailto:contacto.creamberry@gmail.com" title="Email">✉</a>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="cart-modal" aria-hidden="true">
+    <div class="cart-box">
+      <button class="close-cart" id="closeCartBtn">✖</button>
+      <h3>Tu carrito</h3>
+      <div id="cartItems"></div>
+      <div class="cart-summary">
+        <div>Total: <strong id="cartTotal">$0.00</strong></div>
+        <div class="cart-actions">
+          <a href="contacto.html" class="btn btn-primary glow" id="goContact">Finalizar pedido</a>
+          <button class="btn" id="clearCart">Vaciar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" class="logo small" alt="logo" onerror="this.style.display='none'">
+        <div>
+          <div class="brandname">Creamberry</div>
+          <div class="tagline small">Frescura y Sabor</div>
+        </div>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/cream_berry7?igsh=MXV4cXYwdmVzMG44NQ%3D%3D&utm_source=qr" target="_blank" class="social glow">Instagram</a>
+        <a href="https://www.tiktok.com/@cream_berry7" target="_blank" class="social glow">TikTok</a>
+        <a href="mailto:contacto.creamberry@gmail.com" class="social glow">contacto.creamberry@gmail.com</a>
+      </div>
+    </div>
+    <p class="footer-note">Gracias por elegir Creamberry — cada fresa tiene sabor a felicidad 🍓</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

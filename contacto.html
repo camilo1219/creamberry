@@ -35,33 +35,21 @@
   <p>Escríbenos a <a href="mailto:contacto.creamberry@gmail.com">contacto.creamberry@gmail.com</a> o completa el formulario.</p>
 
   <!-- FORMULARIO ACTUALIZADO CON FORMSPREE -->
-<form id="pedidoForm" action="https://formspree.io/f/mpwkwdje" method="POST">
-
-
-    <label>Nombre</label>
-    <input type="text" name="clienteNombre" required>
-
-    <label>Teléfono</label>
-    <input type="text" name="clienteTelefono" required>
-
-    <label>Tipo de entrega</label>
-    <select name="tipoEnvio" id="tipo-envio">
-      <option value="pickup">Retiro</option>
-      <option value="delivery">Delivery</option>
-    </select>
-
-    <div id="direccion-container" style="display:none">
-      <label>Dirección</label>
-      <input type="text" name="clienteDireccion">
-    </div>
-
-    <label>Observaciones</label>
-    <textarea name="observaciones"></textarea>
-
-    <input type="hidden" name="cart" id="cartInput" value="">
-
-    <button class="btn btn-primary" type="submit">Enviar pedido</button>
-  </form>
+<form
+  action="https://formspree.io/f/xdkykgba"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your file:
+    <input type="file" name="upload">
+  </label>
+  <button type="submit">Send</button>
+</form>
   <!-- FIN FORMULARIO -->
 </main>
 

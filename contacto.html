@@ -29,18 +29,38 @@
       <button class="cart-btn" id="openCartBtn" aria-label="Abrir carrito">🛒 <span class="cart-count">0</span></button>
     </nav>
   </header>
+
 <main class="content-page">
   <h2>Contacto</h2>
   <p>Escríbenos a <a href="mailto:contacto.creamberry@gmail.com">contacto.creamberry@gmail.com</a> o completa el formulario.</p>
-  <form id="pedidoForm" action="enviar_pedido.php" method="POST">
-    <label>Nombre</label><input type="text" name="clienteNombre" required>
-    <label>Teléfono</label><input type="text" name="clienteTelefono" required>
-    <label>Tipo de entrega</label><select name="tipoEnvio" id="tipo-envio"><option value="pickup">Retiro</option><option value="delivery">Delivery</option></select>
-    <div id="direccion-container" style="display:none"><label>Dirección</label><input type="text" name="clienteDireccion"></div>
-    <label>Observaciones</label><textarea name="observaciones"></textarea>
+
+  <!-- FORMULARIO ACTUALIZADO CON FORMSPREE -->
+  <form id="pedidoForm" action="https://formspree.io/f/mpkwkdje" method="POST">
+    <label>Nombre</label>
+    <input type="text" name="clienteNombre" required>
+
+    <label>Teléfono</label>
+    <input type="text" name="clienteTelefono" required>
+
+    <label>Tipo de entrega</label>
+    <select name="tipoEnvio" id="tipo-envio">
+      <option value="pickup">Retiro</option>
+      <option value="delivery">Delivery</option>
+    </select>
+
+    <div id="direccion-container" style="display:none">
+      <label>Dirección</label>
+      <input type="text" name="clienteDireccion">
+    </div>
+
+    <label>Observaciones</label>
+    <textarea name="observaciones"></textarea>
+
     <input type="hidden" name="cart" id="cartInput" value="">
+
     <button class="btn btn-primary" type="submit">Enviar pedido</button>
   </form>
+  <!-- FIN FORMULARIO -->
 </main>
 
 <!-- Cart Modal -->

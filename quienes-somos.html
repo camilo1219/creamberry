@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiénes somos - Creamberry</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="site-header">
+    <div class="brand">
+      <img src="logo.png" alt="Creamberry logo" class="logo" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <h1>Creamberry</h1>
+        <p class="tagline">Frescura y Sabor</p>
+      </div>
+    </div>
+
+    <button id="hamburger" class="hamburger" aria-label="Abrir menú">☰</button>
+
+    <nav class="main-nav" id="mainNav" role="navigation">
+      <a href="index.html" class="nav-link ">Inicio</a>
+      <a href="quienes-somos.html" class="nav-link active">Quiénes somos</a>
+      <a href="servicios.html" class="nav-link ">Servicios</a>
+      <a href="toppings.html" class="nav-link ">Toppings</a>
+      <a href="finanzas.html" class="nav-link ">Finanzas</a>
+      <a href="contacto.html" class="nav-link ">Contacto</a>
+      <button class="cart-btn" id="openCartBtn" aria-label="Abrir carrito">🛒 <span class="cart-count">0</span></button>
+    </nav>
+  </header>
+<main class="content-page">
+  <h2>Nuestra historia</h2>
+  <p>Nuestra empresa de fresas con crema nació en el año 2025 con la misión de rescatar el sabor tradicional de este postre clásico, elaborado de forma artesanal y con ingredientes naturales de alta calidad. Todo comenzó con un pequeño puesto en una feria local, donde nos enfocamos en ofrecer un producto auténtico y delicioso que conquistara el corazón de nuestros clientes.</p>
+  <p>Con el tiempo, nuestra dedicación y pasión por la calidad nos permitieron ganar reconocimiento en la comunidad local. La gente comenzó a buscar nuestra marca por su sabor único y su compromiso con la frescura y la salud. A medida que crecimos, nos mantuvimos fieles a nuestros valores fundamentales: utilizar solo ingredientes naturales, elaborar nuestros postres de manera artesanal y brindar un servicio excepcional a nuestros clientes.</p>
+  <p>Actualmente, nuestra empresa busca consolidarse como una marca reconocida en la venta de postres frescos y saludables. Queremos ser la opción preferida para aquellos que buscan un dulce escape sin comprometer la salud ni el sabor. Nuestro objetivo es expandir nuestra presencia en el mercado, innovar en nuestros productos y mantenernos a la vanguardia en la industria de postres artesanales.</p>
+  <img src="https://i.pinimg.com/736x/3d/49/0a/3d490a535c2901f4ce2f2081d1e369d1.jpg" alt="Mostrador" style="width:100%;max-width:900px;border-radius:12px;margin-top:16px">
+</main>
+
+<!-- Cart Modal -->
+  <div id="cartModal" class="cart-modal" aria-hidden="true">
+    <div class="cart-box">
+      <button class="close-cart" id="closeCartBtn">✖</button>
+      <h3>Tu carrito</h3>
+      <div id="cartItems"></div>
+      <div class="cart-summary">
+        <div>Total: <strong id="cartTotal">$0.00</strong></div>
+        <div class="cart-actions">
+          <a href="contacto.html" class="btn btn-primary glow" id="goContact">Finalizar pedido</a>
+          <button class="btn" id="clearCart">Vaciar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="site-footer"><div class="footer-inner"><div class="footer-brand"><img src="logo.png" class="logo small" onerror="this.style.display='none'"><div><div class="brandname">Creamberry</div><div class="tagline small">Frescura y Sabor</div></div></div><div class="socials"><a href="https://www.instagram.com/cream_berry7?igsh=MXV4cXYwdmVzMG44NQ%3D%3D&utm_source=qr" class="social glow">Instagram</a><a href="https://www.tiktok.com/@cream_berry7" class="social glow">TikTok</a><a href="mailto:contacto.creamberry@gmail.com" class="social glow">contacto.creamberry@gmail.com</a></div></div><p class="footer-note">Gracias por elegir Creamberry</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

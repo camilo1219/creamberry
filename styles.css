@@ -1,0 +1,139 @@
+/* Creamberry - Coquett final styles */
+:root{
+  --bg:#fff7fb;
+  --accent:#ff3f7a;
+  --accent-2:#00c985;
+  --text:#4b2433;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Poppins,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#fff);color:var(--text);-webkit-font-smoothing:antialiased}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;position:sticky;top:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(6px);z-index:1000;border-bottom:1px solid rgba(0,0,0,0.03)}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:72px;border-radius:12px;box-shadow:0 12px 40px rgba(255,63,122,0.08)}
+.brand-text h1{margin:0;font-family:Pacifico,cursive;color:var(--accent);font-size:1.4rem}
+.tagline{margin:0;color:#8a4b60;font-size:0.9rem}
+
+.main-nav{display:flex;gap:12px;align-items:center}
+.main-nav .nav-link{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:10px;font-weight:600;transition:all .22s}
+.main-nav .nav-link.active, .main-nav .nav-link:hover{background:linear-gradient(90deg,rgba(255,182,193,0.12),rgba(0,201,133,0.06));transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,0.04)}
+
+.hamburger{display:none;background:none;border:none;font-size:22px;cursor:pointer;padding:6px}
+
+/* Hero */
+.hero{padding:48px 20px}
+.hero-inner{max-width:1200px;margin:0 auto;display:flex;gap:28px;align-items:center;justify-content:space-between}
+.hero-text{flex:1}
+.hero-title{font-size:2.4rem;margin:0;color:var(--accent);font-family:Dancing Script, Pacifico, cursive}
+.hero-sub{color:#6f3d4a;margin-top:8px}
+.hero-ctas{margin-top:14px;display:flex;gap:12px}
+
+.btn{display:inline-block;background:transparent;border:2px solid var(--accent);padding:10px 14px;border-radius:14px;cursor:pointer;font-weight:700;color:var(--accent);text-decoration:none;transition:all .18s}
+.btn.small{padding:8px 10px;border-radius:12px;font-size:0.95rem}
+.btn-primary{background:linear-gradient(180deg,var(--accent),#c2215f);color:white;border:none}
+.btn-ghost{background:transparent;border:2px solid rgba(0,0,0,0.06);color:var(--text)}
+
+/* glow effect */
+.glow{position:relative;overflow:visible}
+.glow::after{content:'';position:absolute;inset:-6px;background:radial-gradient(circle at 50% 10%, rgba(255,63,122,0.16), rgba(0,201,133,0.06) 40%, transparent 60%);border-radius:16px;opacity:0;transition:opacity .25s, transform .25s}
+.glow:hover::after{opacity:1;transform:scale(1.02)}
+
+/* Hero image */
+.hero-image img{width:420px;border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,0.08);max-width:100%}
+
+/* Cards */
+.favorites{max-width:1100px;margin:30px auto;padding:0 20px}
+.favorites h3{text-align:center;margin-bottom:18px}
+.cards{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.card{background:var(--card);width:300px;border-radius:18px;padding:16px;box-shadow:0 20px 60px rgba(107,35,68,0.06);text-align:center;transition:transform .22s,box-shadow .22s}
+.card:hover{transform:translateY(-10px);box-shadow:0 30px 90px rgba(214,51,132,0.12)}
+.card img{width:170px;height:170px;object-fit:cover;border-radius:16px}
+
+/* toppings */
+.toppings-preview{max-width:1100px;margin:30px auto;padding:0 20px;text-align:center}
+.toppings-row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.topping{width:240px;background:linear-gradient(180deg,#fff,#fff7fb);border-radius:16px;padding:12px;text-align:center;box-shadow:0 12px 40px rgba(107,35,68,0.06);transition:transform .18s}
+.topping img{width:100%;height:160px;object-fit:cover;border-radius:12px}
+.topping:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 30px 90px rgba(214,51,132,0.12)}
+
+.price{font-weight:800;color:var(--accent)}
+
+/* content pages */
+.content-page{max-width:1000px;margin:30px auto;padding:20px;background:var(--card);border-radius:12px;box-shadow:0 18px 50px rgba(107,35,68,0.04)}
+
+/* cart modal */
+.cart-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.36);z-index:1200;padding:20px}
+.cart-modal.open{display:flex}
+.cart-box{background:var(--card);width:92%;max-width:540px;border-radius:18px;padding:18px;box-shadow:0 40px 120px rgba(107,35,68,0.16);position:relative}
+.close-cart{position:absolute;right:14px;top:12px;border:none;background:none;font-size:18px;cursor:pointer}
+#cartItems{max-height:320px;overflow:auto;margin-top:12px}
+.cart-summary{margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+
+/* floating socials */
+.social-float{position:fixed;right:16px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:1300}
+.social-float a{background:linear-gradient(180deg,var(--accent),#c2215f);color:white;padding:10px 12px;border-radius:12px;text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,0.12);transition:transform .18s}
+.social-float a:hover{transform:translateY(-6px)}
+
+/* footer */
+.site-footer{margin-top:36px;padding:22px 20px;background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent)}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.socials a{margin-left:10px;text-decoration:none;color:var(--text);font-weight:700;transition:all .18s}
+.socials a:hover{color:var(--accent-2);transform:translateY(-4px)}
+.logo.small{width:48px}
+
+/* responsive */
+@media(max-width:900px){
+  .hero-inner{flex-direction:column-reverse;gap:18px}
+  .hero-image img{width:100%;max-width:420px}
+  .main-nav{display:none;position:fixed;right:16px;top:70px;background:var(--card);padding:12px;border-radius:12px;box-shadow:0 10px 40px rgba(107,35,68,0.08);flex-direction:column}
+  .hamburger{display:block}
+  .cards{flex-direction:column;align-items:center}
+  .service-grid{flex-direction:column;align-items:center}
+}
+
+
+/* ----------------------------- */
+/* ESTILOS DEL NUEVO CARRITO */
+/* ----------------------------- */
+.carrito {
+    position: relative;
+    display: inline-block;
+}
+
+.contador-carrito {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+}
+
+.mini-carrito {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 9999;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.mini-carrito h3 {
+    margin-top: 0;
+}
+
+.mini-carrito button {
+    margin-top: 10px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
